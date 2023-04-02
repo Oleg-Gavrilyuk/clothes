@@ -52,11 +52,6 @@ var basket = [
     }
 ]
 
-var total = {
-    'totalAmount': 0,
-    'totalSumm' : 0
-}
-
 function addGood(goodId) {
     for (var products of goods) {
         if (products.id == goodId) {
@@ -91,6 +86,10 @@ function deleteAll(){
 }
 
 function results(){
+    var total = {
+        'totalAmount': 0,
+        'totalSumm' : 0
+    }
     for (products of basket) {
         total['totalAmount'] += products.amount
         var cost = products.good.price * products.amount
